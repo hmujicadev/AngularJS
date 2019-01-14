@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/lib/angular.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <section>
+        <div class="container">
+           <h1>EVALUACIÓN</h1>
+            <p>Angular 101</p>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Nombre Completo</span>
+                </div>
+                <input type="text" class="form-control" ng-model="nombre" placeholder="Nombre Completo" aria-label="Nombre Completo" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon2">Lugar de Trabajo</span>
+                    </div>
+                    <input type="text" class="form-control" ng-model="lugtrab" placeholder="Lugar de Trabajo" aria-label="Lugar de Trabajo" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon3">Salario en Dolares</span>
+                        </div>
+                        <input type="text" class="form-control" ng-model="salario" placeholder="salario" aria-label="salario" aria-describedby="basic-addon1">
+                </div>
+            
+            
+        
+            <div>
+                    <label for="">Nombre Completo: {{nombre}}</label><br>
+                    <label for="">Lugar de Trabajo: {{lugtrab}}</label><br>
+                    <label for="">Salario en Dolares: {{salario|currency}}</label>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
