@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/lib/angular.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Filtros::Filters</h1>
+            <p>en AngularJS</p>
+            
+            <p>Filtro de texto:{{"FeRrnandO"}}</p>
+            <p>Filtro de texto:{{"FeRrnandO"| uppercase}}</p>
+            <p>Filtro de texto: {{"FeRrnandO"| lowercase}}</p>
+            <p>Filtro de Moneda: {{1200}}</p>
+            <p>Filtro de Moneda: {{1200 | currency:'BsF'}}</p>
+            <p>Filtro de Moneda: {{1200 | number}}</p>
+        </div>
+    </section>
+</body>
+</html>
