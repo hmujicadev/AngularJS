@@ -32,8 +32,32 @@
                 </li>
                 
             </ol>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Clase</th>
+                </tr>
+                <tr ng-repeat="profesor in listadoProfesores.profesores">
+                    <td>{{profesor.nombre}}</td>
+                    <td>{{profesor.edad}}</td>
+                    <td>{{profesor.clase}}</td>
+                </tr>
+            </table>
+
+          <p>{{listadoProfesores|json}}</p>
             
-            
+            <h2>Tabla de multiplicar</h2>
+
+            <table class="col-md-2" ng-repeat="numero in [1,2,3,4,5,6,7,8,9]">
+                <tr>
+                    <th>Tabla del {{numero}}</th>
+                </tr>
+                <tr ng-repeat="multiplo in [1,2,3,4,5,6,7,8,9]">
+                    <td>{{numero}}X{{multiplo}}={{numero*multiplo}}</td>
+                </tr>
+            </table>
 
 
         </div><!-- fin del listadoCtrl -->
