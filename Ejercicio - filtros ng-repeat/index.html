@@ -32,8 +32,34 @@
             <h1>Filtros</h1>
             <h4>Para el ng-repeat</h4>
             <hr>
+            <div class="row">
+                <p>busqueda</p>
+                <input type="text" class="form-control" ng-model="busqueda.nombre">
+                <br>
+                <select class="form-control" ng-model="busqueda.sexo">
+                    <option value="">Selecione</option>
+                    <option value="hombre">Hombres</option>
+                    <option value="mujer">mujeres</option>
+                </select>
+                <br><br>
+            </div>
 
-            
+            <table class="table table-striped">
+                <tr>
+                    <th>Avatar</th>
+                    <th>Nombre</th>
+                    <th>Sexo</th>
+                    <th>Teléfono</th>
+                    <th>Celular</th>
+                </tr>
+                <tr ng-repeat="persona in personas|filter:busqueda">
+                    <td> <img ng-src="img/{{persona.avatar}}" class="avatar img-circle" title="{{persona.nombre}}" alt="Avatar"></td>
+                    <td>{{persona.nombre}}</td>
+                    <td>{{persona.sexo}}</td>
+                    <td>{{persona.telefono}}</td>
+                    <td>{{persona.celular}}</td>
+                </tr>
+            </table>
 
             
             
